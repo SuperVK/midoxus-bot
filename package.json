@@ -1,0 +1,24 @@
+{
+  "name": "midoxus-bot",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperVK/midoxus-bot.git"
+  },
+  "author": "SuperVK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuperVK/midoxus-bot/issues"
+  },
+  "homepage": "https://github.com/SuperVK/midoxus-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "request": "^2.81.0"
+  }
+}
