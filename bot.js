@@ -1,13 +1,19 @@
 const prefix = "-"
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const fs = require('fs');
+app.set('port', (process.env.PORT || 5000));
+var data = fs.readFileSync('profiles.json');
+var profiles = JSON.parse(data);
+
+console.log(profiles);
 
   client.on('ready', async () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setGame('Work in Progress');
   });
 
-
+//leaving and adding members msg
 client.on('guildMemberAdd', member => {
   let channel = member.guild.channels.find('name', 'general');
   channel.send(`Welcome to the server, ${member}`);
@@ -16,11 +22,12 @@ client.on('guildMemberRemove', member => {
   let channel = member.guild.channels.find('name', 'general')
   channel.send(`${member} just left the server, bye o/`)
 });
+
+
 // -serverstatus command
 var request = require('request');
 var mcCommand = '-serverstatus'; // Command for triggering
 var mcIP = '77.173.4.226'; // Your MC server IP
-
 client.on('message', message => {
   if (message.content === mcCommand) {
     var url = 'http://mcapi.us/server/status?ip=' + mcIP;;
@@ -44,6 +51,8 @@ client.on('message', message => {
     });
   }
 });
+
+
 // custom commands
 client.on('message', message => {
   if (message.author.equals(client.user)) return;
@@ -53,10 +62,11 @@ client.on('message', message => {
   var args = message.content.substring(prefix.length).split(" ");
 
   switch (args[0].toLowerCase()) {
-    case "coming soon":
+    case "test2":
+      let words = JSON.stringify("test");
+      fs.writeFile('profiles.json', words);
       break;
-    
-  }
+  };
    var Command = function(input,output){
     if (message.author.equals(client.user)) return;
     if (message.content.toLowerCase() === prefix + input) {
@@ -67,5 +77,7 @@ client.on('message', message => {
   Command("ping","pong")
   Command("ip","Server IP: 77.173.4.226")
   //Command("serverstatus","http://minecraft-mp.com/banner-170399.png")
+  Command("test", profiles.test)
+  Command("test3", profiles.hoi)
   });
-client.login('MzUxNjg3NzMyODgxNTIyNjk5.DJBLEw.gMOnJA2D5IR_4J-vzVlOQjWp4fA');
+client.login('MzUxNjg3NzMyODgxNTIyNjk5.DJBLEw.gMOnJA2D5IR_4J-vzVlOQjWp4fA');;
