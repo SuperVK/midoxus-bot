@@ -5,8 +5,8 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 app.set('port', (process.env.PORT || 5000));
-var data = fs.readFileSync('profiles.json');
-var profiles = JSON.parse(data);
+//var data = fs.readFileSync('profiles.json');
+//var profiles = JSON.parse(data);
 
 console.log(profiles);
 
@@ -64,10 +64,10 @@ client.on('message', message => {
   var args = message.content.substring(prefix.length).split(" ");
 
   switch (args[0].toLowerCase()) {
-    case "test2":
+    /*case "test2":
       let words = JSON.stringify("test");
       fs.writeFile('profiles.json', words);
-      break;
+      break; */
   };
    var Command = function(input,output){
     if (message.author.equals(client.user)) return;
@@ -79,7 +79,7 @@ client.on('message', message => {
   Command("ping","pong")
   Command("ip","Server IP: 77.173.4.226")
   //Command("serverstatus","http://minecraft-mp.com/banner-170399.png")
-  Command("test", profiles.test)
-  Command("test3", profiles.hoi)
+  //Command("test", profiles.test)
+  //Command("test3", profiles.hoi)
   });
 client.login('MzUxNjg3NzMyODgxNTIyNjk5.DJBLEw.gMOnJA2D5IR_4J-vzVlOQjWp4fA');;
