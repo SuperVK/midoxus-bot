@@ -8,7 +8,7 @@ app.set('port', (process.env.PORT || 5000));
 //var data = fs.readFileSync('profiles.json');
 //var profiles = JSON.parse(data);
 
-console.log(profiles);
+//console.log(profiles);
 
   client.on('ready', async () => {
     console.log(`Logged in as ${client.user.tag}!`);
