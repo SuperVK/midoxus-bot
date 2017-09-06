@@ -1,4 +1,4 @@
-{
+
   "name": "midoxus-bot",
   "version": "0.0.1",
   "description": "",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/SuperVK/midoxus-bot#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
+    "express": "^4.15.4",
     "request": "^2.81.0"
   }
 }
