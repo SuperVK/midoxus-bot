@@ -2,6 +2,8 @@ const prefix = "-"
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
+const express = require('express');
+const app = express();
 app.set('port', (process.env.PORT || 5000));
 var data = fs.readFileSync('profiles.json');
 var profiles = JSON.parse(data);
