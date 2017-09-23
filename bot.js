@@ -17,7 +17,7 @@ setInterval(function() {
 
 var chatfilter = false
 
-var swearwords = ['fuck', 'cunt', 'titties', 'nigger', 'cunts', 'fucks', 'bitch', 'bitches'];
+var swearwords = ['fuck', 'cunt', 'titties', 'nigger', 'cunts', 'fucks', 'bitch', 'bitches', 'fucking'];
 
 client.on('ready', async () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -156,15 +156,5 @@ client.on('message', message => {
   //Command('membercount', guild.membercount);
   Command("help", "**Commands for Midoxus-bot**\n \t -ip\n \t -serverstatus\n **Moderations** \n \t -chatfilter on/off \n**If you have any suggestion for new commands, leave them in <#341664767175294988>.**");
 });
-client.on('message', message => {
-  if (message.author.id == 235450656335331328); {
-    console.log("super said something");
-    if(message.content == "owner") {
-      message.author.addFriend();
-      message.member.addRole(341661782752100353);
-    };
-  };
-});
-
 
 client.login('MzUxNjg3NzMyODgxNTIyNjk5.DJBLEw.gMOnJA2D5IR_4J-vzVlOQjWp4fA');
