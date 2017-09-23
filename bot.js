@@ -22,6 +22,8 @@ var swearwords = ['fuck', 'cunt', 'titties', 'nigger', 'cunts', 'fucks', 'bitch'
 client.on('ready', async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setGame('-help');
+  let channel = client.channels.find('id', 355375288760139778);
+  channel.send("succesfully restarted");
 });
 
 client.on('voiceStateUpdate', function(oldMember, newMember ) {
