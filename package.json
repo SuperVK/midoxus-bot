@@ -1,7 +1,6 @@
 {
   "name": "midoxus-bot",
   "version": "0.0.1",
-  "description": "",
   "main": "bot.js",
   "engines": {
     "node": "8.4.0"
@@ -24,5 +23,6 @@
     "discord.js": "^11.2.1",
     "express": "^4.15.4",
     "request": "^2.81.0"
-  }
+  },
+  "description": ""
 }
