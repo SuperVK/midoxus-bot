@@ -22,7 +22,7 @@ var swearwords = ['fuck', 'cunt', 'titties', 'nigger', 'cunts', 'fucks', 'bitch'
 client.on('ready', async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setGame('-help');
-  let channel = client.channels.find('id', 355375288760139778);
+  let channel = client.broadcasts
   channel.send("succesfully restarted");
 });
 
@@ -142,7 +142,10 @@ client.on('message', message => {
             chatfilter = false
             console.log("chatfilter is now off");
           };
-        };
+        };]
+      break;
+      case "numbertrainer": 
+        message.channel.send("nothing to see here");
       break;
 
   };
