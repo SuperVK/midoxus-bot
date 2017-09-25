@@ -39,6 +39,7 @@ client.on('voiceStateUpdate', function(oldMember, newMember ) {
 client.on('guildMemberAdd', member => {
   let channel = member.guild.channels.find('name', 'general');
   channel.send(`Welcome to the server, ${member}`);
+  member.addRole('Member');
 });
 client.on('guildMemberRemove', member => {
   let channel = member.guild.channels.find('name', 'general');
