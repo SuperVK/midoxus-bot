@@ -27,7 +27,7 @@ client.on('ready', async () => {
 client.on('voiceStateUpdate', function(oldMember, newMember ) {
   if (newMember.voiceChannelID == 348523194224869379) {
     if (oldMember.voiceChannelID != 348523194224869379) {
-      newMember.send("Hey, I see you joined the music channel in Midoxus. but we are partnerd with a much larger server fully dedicated to music: join it here \n https://discord.gg/EmSQUHN ");
+      newMember.send("Hey, I see you joined the music channel in Midoxus. but we are partnerd with a much larger server fully dedicated to music: join it here \n https://discord.gg/2sFqXq5 ");
     };
   };
 });
@@ -49,11 +49,11 @@ client.on('message', message => {
   if(message.content == '<@351687732881522699>'){ 
     message.channel.send(`hello, ${message.author}`);
   };
-  /*if(message.content.toLowerCase() == "mk") {
+  if(message.content.toLowerCase() == "mk") {
     if(message.author.username !== "Midoxus-bot") {
-      message.channel.send("mk");
+      message.author.send("mk");
     }; 
-}; */
+}; 
 });
 
 client.on('message', message => {
