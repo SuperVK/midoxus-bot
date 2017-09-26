@@ -143,7 +143,7 @@ client.on('message', message => {
             chatfilter = false
             console.log("chatfilter is now off");
           };
-        };]
+        };
       break;
       case "numbertrainer": 
         message.channel.send("nothing to see here");
