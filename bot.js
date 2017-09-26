@@ -158,7 +158,7 @@ client.on('message', message => {
   Command("ping","pong");
   Command("ip","Server IP: 77.173.4.226");
   //Command('membercount', guild.membercount);
-  Command("help", "**Commands for Midoxus-bot**\n ``` \t -ip\n \t -serverstatus \n ```\n **Moderations** \n ``` \t -chatfilter on/off \n ``` \n**If you have any suggestion for new commands, leave them in <#341664767175294988>.**");
+  Command("help", "**Commands for Midoxus-bot**\n ``` \t -ip\n \t -serverstatus  ```\n **Moderations** \n ``` \t -chatfilter on/off \n ``` \n**If you have any suggestion for new commands, leave them in <#341664767175294988>.**");
 });
 
 client.login('MzUxNjg3NzMyODgxNTIyNjk5.DJBLEw.gMOnJA2D5IR_4J-vzVlOQjWp4fA');
