@@ -21,7 +21,7 @@
   "homepage": "https://github.com/SuperVK/midoxus-bot#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "express": "^4.15.4",
+    "express": "^4.18.2",
     "opusscript": "0.0.3",
     "request": "^2.81.0"
   },
